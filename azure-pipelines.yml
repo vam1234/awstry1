@@ -26,3 +26,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'aws-scripts'
     publishLocation: 'Container'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'script1'
+    publishLocation: 'pipeline'
